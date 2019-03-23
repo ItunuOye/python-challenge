@@ -11,7 +11,7 @@ li = 0
 otooley = 0
 
 
-py_poll= "/Users/itunuo/Documents/Python_Poll/election_data.csv"
+py_poll= "../Resources/election_data.csv"
 
 
 votes = []
