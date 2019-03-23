@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 import csv
-py_bank= "/Users/itunuo/Documents/Python_Bank_2/budget_data_IO.csv"
+py_bank= "budget_data_IO.csv"
 
 #profit_loss = []
 date = []
@@ -43,25 +43,25 @@ with open(py_bank, newline="") as csvfile:
         total_change_profits += monthly_change_profits
         initial_profit = final_profit
 	
-	#Calculate the average change in profits
-	average_change_profits = (total_profit/count_month)
+	    #Calculate the average change in profits
+        average_change_profits = (total_profit/count_month)
 
-	#from statistics import mean
-	#average_profits = sum(monthly_change)/count_month
-	#Find the max and min change in profits and the corresponding dates these changes 	were observed
-	greatest_increase = max(monthly_change)
-	greatest_decrease = min(monthly_change)
-	increase_date = date[monthly_change.index(greatest_increase)]
-	decrease_date = date[monthly_change.index(greatest_decrease)]
+        #from statistics import mean
+        #average_profits = sum(monthly_change)/count_month
+        #Find the max and min change in profits and the corresponding dates these changes were observed
+        greatest_increase = max(monthly_change)
+        greatest_decrease = min(monthly_change)
+        increase_date = date[monthly_change.index(greatest_increase)]
+        decrease_date = date[monthly_change.index(greatest_decrease)]
 
-	#print("Average Change: " + "$" + str(int(average_change_profits)))
-	#print("Average Change: " + "$" + str(round(mean(average_change_profits))))
-	print("Financial Analysis")
-	print("----------------------------------------------------------")
-	print("Total Months: " + str(count_month))
-	print("Total Profits: " + "$" + str(total_profit))
-	print("Average Change: " + "$" + str(int(average_change_profits)))
-	print("Greatest Increase in Profits: " + str(increase_date) + " ($" + 			str(greatest_increase) + ")")
-	print("Greatest Decrease in Profits: " + str(decrease_date) + " ($" + 		     str(greatest_decrease)+ ")")
-	print("----------------------------------------------------------")
-	print("test1 " + str(total_change_profits))
+        #print("Average Change: " + "$" + str(int(average_change_profits)))
+        #print("Average Change: " + "$" + str(round(mean(average_change_profits))))
+    print("Financial Analysis")
+    print("----------------------------------------------------------")
+    print("Total Months: " + str(count_month))
+    print("Total Profits: " + "$" + str(total_profit))
+    print("Average Change: " + "$" + str(int(average_change_profits)))
+    print("Greatest Increase in Profits: " + str(increase_date) + " ($" + str(greatest_increase) + ")")
+    print("Greatest Decrease in Profits: " + str(decrease_date) + " ($" + str(greatest_decrease)+ ")")
+    print("----------------------------------------------------------")
+    print("test1 " + str(total_change_profits))
